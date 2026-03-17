@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corsica Bar & Restaurant - Home</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #fef9f0; color: #2c1810; }
+        
+        header { background: linear-gradient(135deg, #8b1e1e 0%, #b45a2e 100%); color: white; padding: 1rem 0; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo h1 { font-size: 2.2rem; font-family: 'Georgia', serif; }
+        .logo p { font-style: italic; }
+        .hours-badge { background: #ffd700; color: #8b1e1e; padding: 8px 20px; border-radius: 30px; font-weight: bold; }
+        
+        nav { background: #4a2518; position: sticky; top: 0; z-index: 100; border-top: 3px solid #ffd700; border-bottom: 3px solid #ffd700; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-menu { display: flex; list-style: none; justify-content: center; flex-wrap: wrap; }
+        .nav-menu a { color: white; text-decoration: none; padding: 1rem 1.8rem; display: block; font-weight: bold; transition: 0.3s; }
+        .nav-menu a:hover { background: #ffd700; color: #4a2518; }
+        
+        /* ===== HERO SECTION WITH CLEAR IMAGE REPLACEMENT GUIDE ===== */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    /* OPTION 1: Replace the URL below with your own image URL */
+                    /* OPTION 2: Save image in same folder and use: url('restaurant-interior.jpg') */
+                    url('logo.JPG'); 
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        /* FREE STOCK PHOTO URLS YOU CAN USE:
+           - Restaurant interior: https://images.unsplash.com/photo-1517248135467-4c7edcad34c4
+           - Food on table: https://images.unsplash.com/photo-1552566626-52f8b828add9
+           - Bar counter: https://images.unsplash.com/photo-1470337458703-46ad1756a187
+           - Nyama choma: https://images.unsplash.com/photo-1544025162-d76694265947
+        */
+        
+        .hero-content { max-width: 800px; margin: 0 auto; padding: 30px; }
+        .hero h2 { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 2px 2px 4px black; }
+        .hero p { font-size: 1.4rem; margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 15px 35px; background: #ffd700; color: #4a2518; text-decoration: none; border-radius: 50px; font-weight: bold; margin: 0 10px; transition: 0.3s; border: 2px solid white; }
+        .btn:hover { transform: translateY(-5px); background: #ffed4a; }
+        
+        /* Specials Cards - Each has image placeholder */
+        .specials { max-width: 1200px; margin: 50px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .special-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; border: 1px solid #ffd700; }
+        .special-card:hover { transform: translateY(-10px); }
+        
+        /* IMAGE REPLACEMENT GUIDE FOR CARD IMAGES */
+        .special-img { 
+            height: 200px; 
+            background: linear-gradient(45deg, #b45a2e, #8b1e1e); /* Fallback color */
+            /* REPLACE the line below with your food images */
+            /* Example: background: url('grilled-meat.jpg') center/cover; */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect width="100%" height="100%" fill="%238b1e1e"/><text x="50%" y="50%" font-family="Arial" font-size="24" fill="white" text-anchor="middle">🍖 GRILLED MEAT</text></svg>');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+        /* To replace: delete the background-image line above and uncomment one below: */
+        /* Option 1: background: url('nyama-choma.jpg') center/cover; */
+        /* Option 2: background: url('https://your-image-url.com/food.jpg') center/cover; */
+        
+        .special-card h3 { color: #8b1e1e; font-size: 1.8rem; margin: 20px 0 10px; }
+        .price { color: #b45a2e; font-weight: bold; font-size: 1.4rem; margin-bottom: 20px; }
+        
+        .quick-info { background: #4a2518; color: white; padding: 30px 0; }
+        .info-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+        
+        footer { background: #2c1810; color: white; padding: 50px 0 20px; border-top: 5px solid #ffd700; }
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-section h4 { color: #ffd700; margin-bottom: 20px; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: white; text-decoration: none; }
+        .footer-section a:hover { color: #ffd700; }
+        .copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #b45a2e; }
+    </style>
+</head>
+<body>
+    <header>[Header content same as before]</header>
+    <nav>[Navigation same as before]</nav>
+    
+    <!-- HERO SECTION - IMAGE ALREADY SET ABOVE IN CSS -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Corsica</h2>
+            <p>Experience the finest flavors in the heart of Embu.</p>
+            <a href="menu.html" class="btn">View Our Menu</a>
+            <a href="contact.html" class="btn">Visit Us Today</a>
+        </div>
+    </section>
+    
+    <section class="specials">
+        <div class="special-card">
+            <!-- IMAGE REPLACEMENT: Replace this entire div content with <img> tag for best results -->
+            <div class="special-img">
+                <!-- OPTION 1: Replace with actual image tag -->
+                <!-- <img src="grilled-meat.jpg" alt="Grilled Meat" style="width:100%; height:100%; object-fit:cover;"> -->
+                
+                <!-- OPTION 2: Keep as is but change background in CSS -->
+                🍖 GRILLED MEAT
+            </div>
+            <h3>Grilled Special</h3>
+            <p>Tender grilled meat with our secret spices</p>
+            <div class="price">KES 650</div>
+        </div>
+        <div class="special-card">
+            <div class="special-img">
+             <img src="fud4.JPG" alt="Nyama Choma">
+                🍗 NYAMA CHOMA
+            </div>
+            <h3>Nyama Choma</h3>
+            <p>Traditional roasted meat, perfect for sharing</p>
+            <div class="price">KES 1,200/kg</div>
+        </div>
+        <div class="special-card">
+            <div class="special-img">
+                <!-- Replace with: <img src="cocktails.jpg" alt="Cocktails"> -->
+                🍹 COCKTAILS
+            </div>
+            <h3>Signature Cocktails</h3>
+            <p>Refreshing cocktails and ice-cold beers</p>
+            <div class="price">From KES 350</div>
+        </div>
+    </section>
+    
+    <footer>[Footer same as before]</footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corsica - Our Menu</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #fef9f0; color: #2c1810; }
+        
+        header { background: linear-gradient(135deg, #8b1e1e 0%, #b45a2e 100%); color: white; padding: 1rem 0; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo h1 { font-size: 2.2rem; }
+        .logo p { font-style: italic; }
+        .hours-badge { background: #ffd700; color: #8b1e1e; padding: 8px 20px; border-radius: 30px; font-weight: bold; }
+        
+        nav { background: #4a2518; position: sticky; top: 0; z-index: 100; border-top: 3px solid #ffd700; border-bottom: 3px solid #ffd700; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-menu { display: flex; list-style: none; justify-content: center; flex-wrap: wrap; }
+        .nav-menu a { color: white; text-decoration: none; padding: 1rem 1.8rem; display: block; font-weight: bold; transition: 0.3s; }
+        .nav-menu a:hover { background: #ffd700; color: #4a2518; }
+        
+        .page-header { background: #b45a2e; color: white; text-align: center; padding: 60px 20px; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 10px; }
+        .page-header p { font-size: 1.2rem; }
+        
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        
+        .menu-category { margin-bottom: 60px; }
+        .category-title { color: #8b1e1e; font-size: 2.5rem; text-align: center; margin-bottom: 30px; border-bottom: 3px solid #ffd700; padding-bottom: 10px; }
+        
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .menu-item { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 3px 15px rgba(0,0,0,0.1); display: flex; border: 1px solid #ffd700; transition: 0.3s; }
+        .menu-item:hover { transform: scale(1.02); box-shadow: 0 5px 20px rgba(139,30,30,0.2); }
+        .item-image { width: 120px; background: linear-gradient(135deg, #8b1e1e, #b45a2e); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; }
+        .item-details { flex: 1; padding: 20px; }
+        .item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .item-name { color: #8b1e1e; font-size: 1.4rem; font-weight: bold; }
+        .item-price { color: #b45a2e; font-weight: bold; font-size: 1.3rem; }
+        .item-description { color: #666; font-size: 0.95rem; }
+        
+        .beverages-section { background: #f5e6d3; padding: 40px; border-radius: 15px; margin-top: 40px; }
+        
+        footer { background: #2c1810; color: white; padding: 50px 0 20px; border-top: 5px solid #ffd700; }
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-section h4 { color: #ffd700; margin-bottom: 20px; }
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 10px; }
+        .footer-section a { color: white; text-decoration: none; }
+        .footer-section a:hover { color: #ffd700; }
+        .copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #b45a2e; }
+        
+        @media (max-width: 768px) {
+            .menu-item { flex-direction: column; }
+            .item-image { width: 100%; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>CORSICA</h1>
+                <p>Bar & Restaurant • Embu</p>
+            </div>
+            <div class="hours-badge">🕒 Open Today: 09:00 - 17:00</div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <h1>Our Menu</h1>
+        <p>Delicious meals prepared fresh daily</p>
+    </section>
+    
+    <div class="container">
+        <!-- Food Menu -->
+        <div class="menu-category">
+            <h2 class="category-title">🍽️ Signature Dishes</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-image">🍖</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Grilled Meat Platter</span>
+                            <span class="item-price">KES 650</span>
+                        </div>
+                        <p class="item-description">Tender grilled beef, served with ugali, kachumbari, and your choice of sauce</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">🍗</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Nyama Choma (1kg)</span>
+                            <span class="item-price">KES 1,200</span>
+                        </div>
+                        <p class="item-description">Traditional roasted meat, perfect for sharing. Served with kachumbari and salt</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">🍛</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Beef Stew</span>
+                            <span class="item-price">KES 450</span>
+                        </div>
+                        <p class="item-description">Tender beef stew with vegetables, served with rice or ugali</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">🐟</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Fried Fish</span>
+                            <span class="item-price">KES 550</span>
+                        </div>
+                        <p class="item-description">Whole fresh tilapia, deep-fried to perfection, served with ugali and kachumbari</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">🍲</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Mixed Grill</span>
+                            <span class="item-price">KES 850</span>
+                        </div>
+                        <p class="item-description">Assortment of grilled meats: beef, chicken, and sausages</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">🥗</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Vegetarian Platter</span>
+                            <span class="item-price">KES 400</span>
+                        </div>
+                        <p class="item-description">Mixed vegetables, chapati, and rice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Beverages -->
+        <div class="beverages-section">
+            <h2 class="category-title">🍹 Drinks & Beverages</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-image">🍺</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Local Beers (Tusker, Pilsner)</span>
+                            <span class="item-price">KES 250</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">🍸</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Signature Cocktails</span>
+                            <span class="item-price">KES 400</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">🧃</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Fresh Juices</span>
+                            <span class="item-price">KES 200</span>
+                        </div>
+                        <p class="item-description">Mango, passion, orange, or mixed</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">🥤</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Soft Drinks</span>
+                            <span class="item-price">KES 100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">☕</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Tea / Coffee</span>
+                            <span class="item-price">KES 80</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">💧</div>
+                    <div class="item-details">
+                        <div class="item-header">
+                            <span class="item-name">Mineral Water (1L)</span>
+                            <span class="item-price">KES 120</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Special Offers -->
+        <div style="background: #ffd700; padding: 30px; border-radius: 15px; margin-top: 40px; text-align: center;">
+            <h3 style="color: #8b1e1e; font-size: 2rem; margin-bottom: 15px;">🎉 Happy Hour!</h3>
+            <p style="font-size: 1.3rem;">Monday - Friday: 4PM - 6PM | 20% off all drinks</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Corsica Bar & Restaurant</h4>
+                <p>Your home of great food and wonderful memories in Embu.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Monday: 09:00 - 17:00</li>
+                    <li>Other Days: Contact us</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Corsica Bar & Restaurant. All rights reserved. | Website by [Your Name]
+        </div>
+    </footer>
+</body>
+</html>
